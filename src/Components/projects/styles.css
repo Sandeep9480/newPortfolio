@@ -1,0 +1,95 @@
+.portfolioSection {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+}
+
+.portfolioTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: #ff4757;
+    border-bottom: 2px solid #ff4757;
+}
+
+.projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projectCard {
+    background-color: #242424;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+}
+
+.projectImage {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectContent {
+    padding: 1.5rem;
+}
+
+.projectTitle {
+    color: #ff4757;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.projectTitle:hover {
+    text-decoration: underline;
+}
+
+.projectDescription {
+    color: #e1e1e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.techStack {
+    font-size: 0.9rem;
+    color: #a1a1a1;
+}
+
+.techLabel {
+    color: #ff4757;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .portfolioTitle {
+        font-size: 2rem;
+    }
+
+    .projectsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolioSection {
+        padding: 2rem 1rem;
+    }
+}

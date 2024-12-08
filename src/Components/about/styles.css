@@ -1,0 +1,162 @@
+/* About Section */
+.aboutSection {
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+.aboutTitle span {
+    color: #dc2626;
+    text-decoration: underline;
+}
+
+.aboutContent {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.aboutImageWrapper {
+    flex: 0 0 45%;
+    position: relative;
+}
+
+.aboutImageWrapper::after {
+    content: '';
+    position: absolute;
+    right: -1rem;
+    bottom: -1rem;
+    width: 100%;
+    height: 100%;
+    background-color: #dc2626;
+    z-index: 1;
+}
+
+.aboutImage {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.aboutInfo {
+    flex: 1;
+}
+
+.aboutInfo ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aboutInfo li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.aboutSocialLinks {
+    position: fixed;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.aboutIcon {
+    width: 24px;
+    height: 24px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.aboutIcon:hover {
+    color: #dc2626;
+}
+
+.aboutSendMail {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.aboutSendMail:hover {
+    background-color: #ef4444;
+}
+
+.mailIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .aboutContent {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .aboutImageWrapper {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutSection {
+        padding: 3rem 1rem;
+    }
+
+    .aboutSocialLinks {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 2rem;
+    }
+
+    .aboutSendMail {
+        position: static;
+        margin: 2rem auto 0;
+        width: fit-content;
+    }
+
+    .aboutTitle {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .aboutInfo li {
+        font-size: 1rem;
+    }
+}
